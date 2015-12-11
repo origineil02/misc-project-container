@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+        <h1>Hello World!</h1>
+
+        <script>
+
+            $.ajax({
+                url: "http://localhost:7777/service/",
+                dataType: 'jsonp',
+                crossDomain: true,
+                 jsonpCallback: 'data',
+                success: function (data, status, xhr) {
+                    console.log(data)
+                    console.log(status)
+                },
+                error: function(e){console.log(e)}
+            });
+        </script>
+    </body>
+</html>
